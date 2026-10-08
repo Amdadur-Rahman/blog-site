@@ -1,0 +1,5 @@
+instalid apps
+
+1 django
+2 tzdata
+3 python-decouple
