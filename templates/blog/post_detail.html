@@ -11,4 +11,20 @@
 <p>
     <a href="{% url 'blog:post_share' post.id %}">share this post</a>
 </p>
+{% with comments.count as total_comments %}
+<h2>
+    {{total_comments}} comment{{total_comments|pluralize}}
+</h2>
+{% endwith %}
+{% for comment in comments %}
+<div class="comment">
+    <p class="info">
+        comment {{forloop.counter}} by {{comment.name}} {{comment.created}}
+    </p>
+    {{comment.body|linebreaks}}
+</div>
+{% empty %}
+<p>there are no comments</p>
+{% endfor %}
+{% include "blog/comment_form.html" %}
 {% endblock content %}
