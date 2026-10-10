@@ -19,6 +19,10 @@
         this is my blog.
         total posts in my blog {% total_posts %}
     </p>
+    <p>
+        <a href="{% url 'blog:post_feed' %}"> subscribe my site </a>
+    </p>
+    
     <h3>last posts</h3>
     {% show_last_posts 3 %}
     <h3>most commented posts</h3>
