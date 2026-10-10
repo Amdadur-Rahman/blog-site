@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-=mfvu+q+$!i%9kjlucz_b!9sc0($x=q)j5-v&9wgimcq)(i(4q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'web: gunicorn blog.wsgi',
+    # 'web: gunicorn blog.wsgi',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
